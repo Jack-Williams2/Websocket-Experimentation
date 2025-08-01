@@ -4,7 +4,7 @@ namespace WebsocketApi.Database
 {
     public class DatabaseContext : DbContext
     {
-        public readonly DbSet<Sample> samples;
+        public DbSet<Sample> samples { get; set; }
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
